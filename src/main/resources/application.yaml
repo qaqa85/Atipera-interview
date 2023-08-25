@@ -1,0 +1,3 @@
+github:
+  apiKey: ${API_KEY}
+  apiVersion: ${API_VERSION}
