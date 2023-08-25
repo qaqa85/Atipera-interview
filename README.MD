@@ -1,12 +1,11 @@
 Atipera Interview Program
 ---
----
+
 
 The Atipera Interview Program is a robust application that leverages data from the GitHub API. The application exposes endpoints on port 8080, facilitating seamless interaction with GitHub repositories.
 
 Requirements
 ---
-___
 
 Before getting started, ensure you have the following:
 
@@ -15,7 +14,6 @@ Before getting started, ensure you have the following:
 
 Installation
 ------------
-___
 
 You can effortlessly set up the application using the following steps:
 
@@ -63,13 +61,11 @@ docker run -e "API_KEY=YOUR_API_KEY" -e "API_VERSION=YOUR_API_VERSION" -p 8080:8
 
 Usage
 -----
-___
 
 The application is accessible via http://localhost:8080. It offers the following endpoints:
 
 Endpoints
 ---
-___
 
 ### User repositories with branches 
 
