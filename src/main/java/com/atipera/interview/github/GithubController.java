@@ -1,6 +1,6 @@
 package com.atipera.interview.github;
 
-import com.atipera.interview.github.dtos.RepositoryWithBranchAndShaDTO;
+import com.atipera.interview.github.dtos.*;
 import com.atipera.interview.github.exceptions.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -14,12 +14,12 @@ class GithubController {
     private final GithubService service;
 
     @GetMapping(value = "/repositories")
-    Flux<RepositoryWithBranchAndShaDTO> getRepositories(@RequestParam String user,
-                                                        @RequestHeader("Accept") String acceptHeader) {
+    Flux<Repository> getRepositories(@RequestParam String user,
+                                     @RequestHeader("Accept") String acceptHeader) {
         if (acceptHeader.contains(MediaType.APPLICATION_XML_VALUE)) {
             throw new NotAcceptableApplicationException("Invalid accept header");
         }
 
-        return service.getRepositoriesWithoutFork(user);
+        return service.getRepositoriesWithBranches(user);
     }
 }
